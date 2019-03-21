@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -21,12 +20,12 @@ public class Main {
             JSONArray exercisesList = (JSONArray) obj;
             exercisesList.forEach( exec -> availableExercises.add(execGen.generateExercise((JSONObject) exec )));
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
+        } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
+        availableExercises.forEach(exec -> System.out.println(exec.showWeek()));
+        availableExercises.forEach(exec -> System.out.println(exec.showName()));
+        availableExercises.forEach(exec -> System.out.println(exec.showReps()));
+        availableExercises.forEach(exec -> System.out.println(exec.showSeries()));
     }
 }
