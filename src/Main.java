@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         ExerciseGenerator execGen = new ExerciseGenerator();
         JSONParser jsonParser = new JSONParser();
-        ArrayList availableExercises = new ArrayList();
+        ArrayList<SimpleExercise> availableExercises = new ArrayList<>();
         try (FileReader reader = new FileReader("exercises.json"))
         {
             Object obj = jsonParser.parse(reader);
