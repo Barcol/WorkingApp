@@ -4,7 +4,7 @@ public class SimpleExercise implements Exercise {
     private int series;
     private char week;
 
-    public SimpleExercise(String name, int reps, int series, char week){
+    SimpleExercise(String name, int reps, int series, char week){
         this.name = name;
         this.reps = reps;
         this.series = series;
