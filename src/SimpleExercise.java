@@ -1,4 +1,11 @@
 public class SimpleExercise implements Exercise {
+    SimpleExercise(){
+        final String name = "";
+        final int reps = 0;
+        final int series = 0;
+        final char week = 'a';
+    }
+
     @Override
     public void failSet() {
         System.out.println("fail");
@@ -18,7 +25,7 @@ public class SimpleExercise implements Exercise {
 
     @Override
     public String showName() {
-        System.out.println("my name is...");
+        System.out.println(this.name);
         return null;
     }
 
