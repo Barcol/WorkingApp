@@ -2,7 +2,8 @@ import java.util.Map;
 
 public class ExerciseGenerator {
 
-    public static SimpleExercise generateExercise(Map data) {
-        return new SimpleExercise(data["name"], data["reps"], data["series"], data["week"]);
+    public SimpleExercise generateExercise(Map data) {
+        return new SimpleExercise((String) data.get("name"), (int) data.get("reps"), (int) data.get("series"),
+                (char) data.get("week"));
     }
 }
