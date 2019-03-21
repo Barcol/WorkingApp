@@ -1,9 +1,14 @@
 public class SimpleExercise implements Exercise {
-    SimpleExercise(){
-        String name = "";
-        int reps = 0;
-        int series = 0;
-        char week = 'a';
+    private String name;
+    private int reps;
+    private int series;
+    private char week;
+
+    public SimpleExercise(String name, int reps, int series, char week){
+        this.name = name;
+        this.reps = reps;
+        this.series = series;
+        this.week = week;
     }
 
     @Override
@@ -25,25 +30,21 @@ public class SimpleExercise implements Exercise {
 
     @Override
     public String showName() {
-        System.out.println(this.name);
-        return null;
+        return this.name;
     }
 
     @Override
     public int showReps() {
-        System.out.println("reps");
-        return 0;
+        return this.reps;
     }
 
     @Override
     public int showSeries() {
-        System.out.println("series");
-        return 0;
+        return this.series;
     }
 
     @Override
     public char showWeek() {
-        System.out.println("week A");
-        return 0;
+        return this.week;
         }
     }

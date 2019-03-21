@@ -1,14 +1,9 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Dictionary;
 
 public class ExerciseGenerator {
 
-    public static void createExcercise(Dictionary[] data, SimpleExercise exercise) {
-
-
+    public static void generateExercise(Dictionary[] data) {
+        return (Exercise) new SimpleExercise(data["name"], data["reps"], data["series"], data["week"]);
 
     }
-
 }
