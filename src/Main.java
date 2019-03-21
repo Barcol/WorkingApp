@@ -23,9 +23,10 @@ public class Main {
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        availableExercises.forEach(exec -> System.out.println(exec.showWeek()));
-        availableExercises.forEach(exec -> System.out.println(exec.showName()));
-        availableExercises.forEach(exec -> System.out.println(exec.showReps()));
-        availableExercises.forEach(exec -> System.out.println(exec.showSeries()));
+        availableExercises.forEach(exec -> {System.out.println(exec.showWeek());
+                                            System.out.println(exec.showSeries());
+                                            System.out.println(exec.showReps());
+                                            System.out.println(exec.showName());
+                                            });
     }
 }
