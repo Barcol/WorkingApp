@@ -1,8 +1,8 @@
-import java.util.Dictionary;
+import java.util.HashMap;
 
 public class ExerciseGenerator {
 
-    public static void generateExercise(Dictionary[] data) {
+    public static void generateExercise(HashMap[] data) {
         return (Exercise) new SimpleExercise(data["name"], data["reps"], data["series"], data["week"]);
 
     }
