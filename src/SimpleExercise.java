@@ -1,9 +1,9 @@
 public class SimpleExercise implements Exercise {
     SimpleExercise(){
-        final String name = "";
-        final int reps = 0;
-        final int series = 0;
-        final char week = 'a';
+        String name = "";
+        int reps = 0;
+        int series = 0;
+        char week = 'a';
     }
 
     @Override
