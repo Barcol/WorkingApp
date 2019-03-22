@@ -11,22 +11,10 @@ import org.json.simple.parser.ParseException;
 public class Main {
 
     public static void main(String[] args) {
-        ExerciseGenerator execGen = new ExerciseGenerator();
-        JSONParser jsonParser = new JSONParser();
-        ArrayList<SimpleExercise> availableExercises = new ArrayList<>();
-        try (FileReader reader = new FileReader("exercises.json"))
-        {
-            Object obj = jsonParser.parse(reader);
-            JSONArray exercisesList = (JSONArray) obj;
-            exercisesList.forEach( exec -> availableExercises.add(execGen.generateExercise((JSONObject) exec )));
-
-        } catch (IOException | ParseException e) {
-            e.printStackTrace();
+        ExerciseGenerator exerciseGenerator = new ExerciseGenerator();
+        ArrayList availableExercise = exerciseGenerator.prepareExercise();
+        for (Exercise nextExec:availableExercise){
+            System.out.println(nextExec);
         }
-        availableExercises.forEach(exec -> {System.out.println(exec.showWeek());
-                                            System.out.println(exec.showSeries());
-                                            System.out.println(exec.showReps());
-                                            System.out.println(exec.showName());
-                                            });
     }
 }
