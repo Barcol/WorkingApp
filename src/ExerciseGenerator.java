@@ -15,7 +15,7 @@ class ExerciseGenerator {
                 Math.toIntExact((long) data.get("series")), ((String) data.get("week")).charAt(0));
     }
 
-    public ArrayList prepareExercise(){
+    ArrayList prepareExercise(){
         JSONParser jsonParser = new JSONParser();
         ArrayList<SimpleExercise> availableExercises = new ArrayList<>();
         try (FileReader reader = new FileReader("exercises.json"))
