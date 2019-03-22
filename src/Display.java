@@ -1,4 +1,4 @@
 public interface Display {
     void showButtons();
-    void reactForAction();
+    void reactToAction();
 }
